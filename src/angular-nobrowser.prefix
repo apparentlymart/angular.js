@@ -1,0 +1,20 @@
+/**
+ * @license AngularJS v"NG_VERSION_FULL"
+ * (c) 2010-2012 Google, Inc. http://angularjs.org
+ * License: MIT
+ */
+(function(undefined) {
+  // Put enough of a navigator function here that the msie detection
+  // will run and detect that we're not in msie.
+  var navigator = {
+    userAgent: ''
+  };
+  // Put enough of a window and document here that the jqLite library
+  // will initialize thinking it can use element.addEventListener.
+  // (which it can't normally, but if the user provides a DOM implementation
+  // like jsdom then it can.)
+  var window = {};
+  window.window = window;
+  window.document = {
+    addEventListener: true
+  };

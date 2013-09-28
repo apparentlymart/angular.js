@@ -124,6 +124,10 @@ module.exports = function(grunt) {
           minify: true
         }
       },
+      angularNoBrowser: {
+        dest: 'build/angular-nobrowser.js',
+        src: util.wrap([files['angularSrc']], 'angular-nobrowser')
+      },
       loader: {
         dest: 'build/angular-loader.js',
         src: util.wrap(['src/loader.js'], 'loader')
